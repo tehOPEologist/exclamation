@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import 'normalize.css';
+import './index.css';
 import App from './components/app';
 
 const render = Component => {
