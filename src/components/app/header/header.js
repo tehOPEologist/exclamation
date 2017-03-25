@@ -47,6 +47,7 @@ export default class AppHeader extends Component {
                     <input className={ styles.searchInput } type="text" placeholder="Search" ref={ input => { this.searchInput = input; } } />
                 </div>
             </div>
+            <a href="" className={ styles.cart }>0</a>
             <button className={ styles.menuButton } onClick={ this.menuButtonClick }>Menu</button>
             <Categories visible={ categoriesVisible } />
             <Menu visible={ menuVisible } />
