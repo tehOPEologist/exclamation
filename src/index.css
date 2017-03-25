@@ -7,6 +7,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    outline: 0;
 }
 
 html {
@@ -24,4 +25,9 @@ li {
 
 a {
     text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
 }
