@@ -1,0 +1,15 @@
+.menu {
+    display: none;
+    flex: 100%;
+}
+
+.visible {
+    display: block;
+}
+
+.link {
+    color: #fff;
+    display: block;
+    line-height: 2;
+    padding: 0 1rem;
+}

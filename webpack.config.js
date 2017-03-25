@@ -10,7 +10,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: __dirname,
-        publicPath: 'http://localhost:8080/'
+        publicPath: 'http://localhost/'
     },
     module: {
         rules: [
@@ -48,6 +48,7 @@ module.exports = {
         new webpack.NamedModulesPlugin()
     ],
     devServer: {
-        hot: true
+        hot: true,
+        port: 80
     }
 };
