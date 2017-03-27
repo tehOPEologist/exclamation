@@ -1,0 +1,13 @@
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link {
+    display: block;
+    color: #669510;
+    font-size: smaller;
+    line-height: 2.5;
+    padding: 0 0.5rem;
+}

@@ -1,7 +1,22 @@
 .footer {
-    font-size: x-small;
-    text-align: center;
     margin-top: auto;
+}
+
+.copyright {
+    margin: 0;
+    font-size: x-small;
     padding: 0.5rem;
     line-height: 1.5;
+    text-align: center;
+}
+
+.customerService {
+    display: block;
+    color: #fff;
+    line-height: 2.5;
+    width: 15rem;
+    background: #999;
+    margin: 0.5rem auto;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
