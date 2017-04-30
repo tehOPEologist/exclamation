@@ -16,7 +16,7 @@ export default class App extends Component {
     };
 
     closeMenu = e => {
-        if (this.state.menuVisible && e.target.id !== 'menu' && e.target.parentNode.id !== 'menu') {
+        if (this.state.menuVisible && e.target.id !== 'menu') {
             this.menuButtonClicked(e);
         }
     };
