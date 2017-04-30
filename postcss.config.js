@@ -1,10 +1,10 @@
 module.exports = {
-    plugins: [
-        require('autoprefixer')({
+    plugins: {
+        'postcss-cssnext': {
             browsers: [
                 'last 2 versions',
-                'not ie <= 8'
+                'ie > 8'
             ]
-        })
-    ]
+        }
+    }
 };

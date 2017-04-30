@@ -1,0 +1,24 @@
+.menu {
+    position: fixed;
+    width: 75vw;
+    left: calc(-75vw - 16px);
+    top: 44px;
+    bottom: 0;
+    overflow-y: auto;
+    background: #fff;
+    will-change: transform;
+    z-index: 90;
+    transition: 0.1s transform ease-in-out;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+.link {
+    display: block;
+    line-height: 44px;
+    color: #669510;
+    padding: 0 8px;
+}
+
+.visible {
+    transform: translateX(calc(75vw + 16px));
+}

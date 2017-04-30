@@ -4,13 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: [
-        'react-hot-loader/patch',
         resolve(__dirname, 'src')
     ],
     output: {
         filename: 'bundle.js',
-        path: resolve(__dirname, 'dist'),
-        publicPath: 'http://localhost:8080/'
+        path: resolve(__dirname, 'dist')
     },
     module: {
         rules: [
@@ -41,17 +39,18 @@ module.exports = {
     target: 'web',
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development')
+            'process.env.NODE_ENV': JSON.stringify('production')
         }),
         new HtmlWebpackPlugin({
-            template: resolve(__dirname, 'src', 'index.ejs')
+            template: resolve(__dirname, 'src', 'index.ejs'),
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true
+            }
         }),
-        new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        new webpack.NamedModulesPlugin()
-    ],
-    devServer: {
-        hot: true,
-        port: 8080
-    }
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true
+        })
+    ]
 };
