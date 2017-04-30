@@ -1,6 +1,5 @@
 .footer {
     height: 88px;
-    background: #669510;
     box-shadow: inset 0 0 16px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
@@ -11,4 +10,48 @@
     left: 0;
     right: 0;
     z-index: -1;
+}
+
+.Woot {
+    background: #669510;
+}
+
+.Home {
+    background: #d35500;
+}
+
+.Electronics {
+    background: #108487;
+}
+
+.Computers {
+    background: #019eb2;
+}
+
+.Tools {
+    background: #ff8500;
+}
+
+.Sport {
+    background: #60aa00;
+}
+
+.Fashion {
+    background: #6230aa;
+}
+
+.Kids {
+    background: #efa602;
+}
+
+.Shirt {
+    background: #0071b0;
+}
+
+.Wine {
+    background: #891b28;
+}
+
+.Sellout {
+    background: #467c32;
 }

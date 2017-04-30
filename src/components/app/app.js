@@ -5,7 +5,10 @@ import Menu from './menu';
 import Footer from './footer';
 
 export default class App extends Component {
-    state = { menuVisible: false };
+    state = {
+        menuVisible: false,
+        category: 'Woot'
+    };
 
     menuButtonClicked = e => {
         e.preventDefault();
@@ -14,14 +17,18 @@ export default class App extends Component {
 
     closeMenu = e => {
         if (this.state.menuVisible && e.target.id !== 'menu' && e.target.parentNode.id !== 'menu') {
-            e.preventDefault();
-            this.setState({ menuVisible: false });
+            this.menuButtonClicked(e);
         }
     };
 
+    categoryClicked = (e) => {
+        e.preventDefault();
+        this.setState({ category: e.target.innerHTML });
+    };
+
     render = () => <div className={ `${styles.app}${this.state.menuVisible ? ` ${styles.menuVisible}` : ``}` } onClick={ this.closeMenu }>
-        <Header menuButtonClicked={ this.menuButtonClicked } menuVisible={ this.state.menuVisible } />
-        <Menu visible={ this.state.menuVisible } />
-        <Footer />
+        <Header menuButtonClicked={ this.menuButtonClicked } menuVisible={ this.state.menuVisible } category={ this.state.category } />
+        <Menu visible={ this.state.menuVisible } category={ this.state.category } categoryClicked={ this.categoryClicked } />
+        <Footer category={ this.state.category } />
     </div>;
 };

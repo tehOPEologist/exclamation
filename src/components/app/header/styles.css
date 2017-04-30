@@ -1,5 +1,4 @@
 .header {
-    background: #669510;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -31,7 +30,7 @@
 
 .h1 {
     color: #fff;
-    font-weight: normal;
+    font-weight: 300;
     margin: 0 auto;
     padding: 0 8px;
     line-height: 44px;
@@ -86,4 +85,67 @@
 
 .menuVisibleForButton {
     background-color: rgba(255, 255, 255, 0.25);
+}
+
+.strong {
+    font-weight: 700;
+}
+
+.category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 44px;
+    opacity: 0;
+    will-change: opacity;
+    z-index: -1;
+}
+
+.Woot {
+    background: #669510;
+}
+
+.Home {
+    background: #d35500;
+}
+
+.Electronics {
+    background: #108487;
+}
+
+.Computers {
+    background: #019eb2;
+}
+
+.Tools {
+    background: #ff8500;
+}
+
+.Sport {
+    background: #60aa00;
+}
+
+.Fashion {
+    background: #6230aa;
+}
+
+.Kids {
+    background: #efa602;
+}
+
+.Shirt {
+    background: #0071b0;
+}
+
+.Wine {
+    background: #891b28;
+}
+
+.Sellout {
+    background: #467c32;
+}
+
+.categoryVisible {
+    opacity: 1;
 }

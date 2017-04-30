@@ -15,10 +15,54 @@
 .link {
     display: block;
     line-height: 44px;
-    color: #669510;
     padding: 0 8px;
+    font-family: museo, system-ui;
 }
 
 .visible {
     transform: translateX(calc(75vw + 16px));
+}
+
+.Woot {
+    color: #669510;
+}
+
+.Home {
+    color: #d35500;
+}
+
+.Electronics {
+    color: #108487;
+}
+
+.Computers {
+    color: #019eb2;
+}
+
+.Tools {
+    color: #ff8500;
+}
+
+.Sport {
+    color: #60aa00;
+}
+
+.Fashion {
+    color: #6230aa;
+}
+
+.Kids {
+    color: #efa602;
+}
+
+.Shirt {
+    color: #0071b0;
+}
+
+.Wine {
+    color: #891b28;
+}
+
+.Sellout {
+    color: #467c32;
 }
