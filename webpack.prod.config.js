@@ -31,6 +31,10 @@ module.exports = {
                     },
                     'postcss-loader'
                 ]
+            },
+            {
+                test: /\.svg$/,
+                loader: 'raw-loader'
             }
         ]
     },

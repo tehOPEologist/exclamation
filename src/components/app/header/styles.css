@@ -13,19 +13,18 @@
 .header::before {
     content: '';
     position: fixed;
-    z-index: 1000;
-    height: 16px;
-    left: calc(-75vw - 16px);
-    width: 75vw;
     top: 44px;
-    background: #fff;
+    bottom: 0;
+    width: 8px;
+    left: 75vw;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 10%, rgba(0, 0, 0, 0));
+    transform: translateX(calc(-75vw - 16px));
     will-change: transform;
     transition: 0.1s transform ease-in-out;
-    pointer-events: none;
 }
 
 .menuVisibleForHeader::before {
-    transform: translateX(calc(75vw + 16px));
+    transform: translateX(0);
 }
 
 .h1 {
