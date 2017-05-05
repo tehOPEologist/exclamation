@@ -52,6 +52,14 @@ module.exports = {
                 collapseWhitespace: true
             }
         }),
+        new HtmlWebpackPlugin({
+            filename: '200.html',
+            template: resolve(__dirname, 'src', 'index.ejs'),
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true
+            }
+        }),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: true
