@@ -20,8 +20,10 @@
     transition: 0.1s opacity ease-in-out;
     opacity: 0;
     will-change: opacity;
+    pointer-events: none;
 }
 
 .menuVisible::before {
     opacity: 1;
+    pointer-events: auto;
 }
