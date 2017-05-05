@@ -10,7 +10,15 @@ import Category from '../../pages/category';
 export default class App extends Component {
     state = {
         menuVisible: false,
-        category: 'Woot'
+        category: null
+    };
+
+    componentDidMount = () => {
+        if (location.pathname.split(`/`).splice(1, 1) == '') {
+            this.setState({ category:  'Woot' });
+        } else {
+            this.setState({ category: `${location.pathname.split(`/`).splice(1, 1)[0].substr(0, 1).toUpperCase()}${location.pathname.split(`/`).splice(1, 1)[0].substr(1, location.pathname.split(`/`).splice(1, 1)[0].length)}` });
+        }
     };
 
     menuButtonClicked = e => {
