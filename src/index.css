@@ -40,3 +40,7 @@ button,
 input {
     font-family: inherit;
 }
+
+main {
+    padding: 16px 8px;
+}

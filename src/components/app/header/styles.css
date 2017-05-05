@@ -7,7 +7,7 @@
     left: 0;
     width: 100vw;
     z-index: 100;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 16px rgba(51, 51, 51, 0.5);
 }
 
 .header::before {
@@ -17,7 +17,7 @@
     bottom: 0;
     width: 8px;
     left: 75vw;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 10%, rgba(0, 0, 0, 0));
+    background: linear-gradient(to right, rgba(51, 51, 51, 0.15), rgba(51, 51, 51, 0.15) 10%, rgba(51, 51, 51, 0));
     transform: translateX(calc(-75vw - 16px));
     will-change: transform;
     transition: 0.1s transform ease-in-out;

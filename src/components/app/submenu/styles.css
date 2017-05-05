@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 44px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 16px rgba(51, 51, 51, 0.5);
     display: flex;
     justify-content: space-between;
     background: #fff;
@@ -27,10 +27,10 @@
     flex: 1;
 
     & svg {
-        width: calc(100% / 1.75);
+        width: 24px;
         height: auto;
         position: relative;
-        top: 2px;
+        top: 3px;
     }
 }
 
