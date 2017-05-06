@@ -13,7 +13,6 @@ export default class Featured extends Component {
         .then(response => response.json())
         .then(json => {
             this.setState({ featured: json });
-            console.log(json);
         })
         .catch(err => {
             console.log(err);
@@ -39,15 +38,14 @@ export default class Featured extends Component {
             <img src={ featured[0].Offers[0].Photos[0].Url } alt={ featured[0].Title } className={ styles.img } />
             <h2 className={ styles.h2 }>{ featured[0].Title }</h2>
             <p className={ `${styles.p} ${styles.price}` }>
-                <strong>
-                    <span>{ parseInt(featured[0].Offers[0].Items[0].SalePrice.toString().split(`.`).shift()).toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 }) }</span>
-                </strong>
+                <sup className={ styles.pSup }>&#36;</sup>
+                <span>{ featured[0].Offers[0].Items[0].SalePrice.toString().split('.').shift() }</span>
                 <sup className={ styles.pSup }>99</sup>
             </p>
             <p className={ styles.p }>Condition: New</p>
             <p className={ styles.p }>
                 <span className={ styles.stars }></span>
-                <span>&#40;1&#44;179&#41;</span>
+                <span className={ styles.reviewCount }>1&#44;179 Amazon Reviews</span>
             </p>
         </Link>;
     }

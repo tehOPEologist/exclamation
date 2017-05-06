@@ -1,0 +1,36 @@
+.h {
+    margin-top: 16px;
+    color: #8a8a8a;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.listItem {
+    display: flex;
+    box-shadow: 0 0 6px rgba(51, 51, 51, 0.3);
+    padding: 8px;
+    margin-top: 16px;
+}
+
+.img {
+    margin-right: 8px;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.p {
+    margin: 0;
+}
+
+.title {
+    font-family: Museo, system-ui;
+}
+
+.ends {
+    color: #8a8a8a;
+    font-size: smaller;
+}
