@@ -1,6 +1,7 @@
 const resolve = require('path').resolve;
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -19,18 +20,20 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            localIdentName: '[local]__[hash:base64:5]',
-                            sourceMap: true
-                        }
-                    },
-                    'postcss-loader'
-                ]
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                modules: true,
+                                localIdentName: '[local]__[hash:base64:5]',
+                                sourceMap: true
+                            }
+                        },
+                        'postcss-loader'
+                    ]
+                })
             },
             {
                 test: /\.svg$/,
@@ -45,14 +48,14 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
-        new HtmlWebpackPlugin({
+        new HtmlPlugin({
             template: resolve(__dirname, 'src', 'index.ejs'),
             minify: {
                 removeComments: true,
                 collapseWhitespace: true
             }
         }),
-        new HtmlWebpackPlugin({
+        new HtmlPlugin({
             filename: '200.html',
             template: resolve(__dirname, 'src', 'index.ejs'),
             minify: {
@@ -63,6 +66,10 @@ module.exports = {
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: true
+        }),
+        new ExtractTextPlugin({
+            allChunks: true,
+            filename: 'styles.css'
         })
     ]
 };

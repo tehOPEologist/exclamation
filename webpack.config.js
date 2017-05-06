@@ -1,6 +1,6 @@
 const resolve = require('path').resolve;
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: [
@@ -47,7 +47,7 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development')
         }),
-        new HtmlWebpackPlugin({
+        new HtmlPlugin({
             template: resolve(__dirname, 'src', 'index.ejs')
         }),
         new webpack.HotModuleReplacementPlugin(),
