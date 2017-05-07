@@ -1,13 +1,15 @@
 .footer {
-    height: 88px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     color: #fff;
     position: fixed;
     bottom: 44px;
     left: 0;
     right: 0;
+    flex-direction: column;
+    padding: 8px 0;
+    height: calc(100vh - 88px);
     z-index: -1;
 }
 
@@ -53,4 +55,106 @@
 
 .Sellout {
     background: #467c32;
+}
+
+.customerService {
+    color: #fff;
+    padding: 0 16px;
+    line-height: 2;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-family: Museo, system-ui;
+}
+
+.customerService:active {
+    background: #fff;
+}
+
+.WootText:active {
+    color: #669510;
+}
+
+.HomeText:active {
+    color: #d35500;
+}
+
+.ElectronicsText:active {
+    color: #108487;
+}
+
+.ComputersText:active {
+    color: #019eb2;
+}
+
+.ToolsText:active {
+    color: #ff8500;
+}
+
+.SportText:active {
+    color: #60aa00;
+}
+
+.FashionText:active {
+    color: #6230aa;
+}
+
+.KidsText:active {
+    color: #efa602;
+}
+
+.ShirtText:active {
+    color: #0071b0;
+}
+
+.WineText:active {
+    color: #891b28;
+}
+
+.SelloutText:active {
+    color: #467c32;
+}
+
+.lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+.link {
+    color: #fff;
+    display: block;
+    line-height: 3;
+    font-size: x-small;
+    white-space: nowrap;
+    padding: 0 16px;
+    width: 138px;
+}
+
+.community::before {
+    content: 'Community';
+}
+
+.blog::before {
+    content: 'Blog';
+}
+
+.community::before,
+.blog::before {
+    display: block;
+    text-decoration: underline;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 3;
+    font-size: x-small;
+    font-weight: bold;
+    padding: 0 16px;
+}
+
+.copyright {
+    font-size: x-small;
+}
+
+.listsGroup {
+    display: flex;
 }

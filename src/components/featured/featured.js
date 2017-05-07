@@ -13,10 +13,31 @@ export default class Featured extends Component {
         .then(response => response.json())
         .then(json => {
             this.setState({ featured: json });
+            console.log(json);
         })
         .catch(err => {
             console.log(err);
         });
+    };
+
+    renderPrice = items => {
+        if (items.length == 1) {
+            return <p className={ `${styles.p} ${styles.price}` }>
+                <sup className={ styles.pSup }>&#36;</sup>
+                <span>{ items[0].SalePrice.toString().split('.').shift() }</span>
+                <sup className={ styles.pSup }>99</sup>
+            </p>;
+        } else {
+            return <p className={ `${styles.p} ${styles.price}` }>
+                <sup className={ styles.pSup }>&#36;</sup>
+                <span>{ items[0].SalePrice.toString().split('.').shift() }</span>
+                <sup className={ styles.pSup }>99</sup>
+                <span className={ styles.priceDash }>&ndash;</span>
+                <sup className={ styles.pSup }>&#36;</sup>
+                <span>{ items[items.length - 1].SalePrice.toString().split('.').shift() }</span>
+                <sup className={ styles.pSup }>99</sup>
+            </p>;
+        }
     };
 
     componentDidMount = () => {
@@ -37,11 +58,7 @@ export default class Featured extends Component {
             <h1 className={ styles.h }>Featured</h1>
             <img src={ featured[0].Offers[0].Photos[0].Url } alt={ featured[0].Title } className={ styles.img } />
             <h2 className={ styles.h2 }>{ featured[0].Title }</h2>
-            <p className={ `${styles.p} ${styles.price}` }>
-                <sup className={ styles.pSup }>&#36;</sup>
-                <span>{ featured[0].Offers[0].Items[0].SalePrice.toString().split('.').shift() }</span>
-                <sup className={ styles.pSup }>99</sup>
-            </p>
+            { this.renderPrice(featured[0].Offers[0].Items) }
             <p className={ styles.p }>Condition: New</p>
             <p className={ styles.p }>
                 <span className={ styles.stars }></span>
