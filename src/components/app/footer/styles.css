@@ -125,7 +125,7 @@
     color: #fff;
     display: block;
     line-height: 3;
-    font-size: x-small;
+    font-size: smaller;
     white-space: nowrap;
     padding: 0 8px;
     width: 138px;
@@ -146,13 +146,9 @@
     color: #fff;
     text-transform: uppercase;
     line-height: 3;
-    font-size: x-small;
+    font-size: smaller;
     font-weight: bold;
     padding: 0 8px;
-}
-
-.copyright {
-    font-size: x-small;
 }
 
 .listsGroup {

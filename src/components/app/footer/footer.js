@@ -32,5 +32,5 @@ export default ({ category }) => <footer className={ `${styles.footer} ${styles[
             </ul>
         </div>
     </div>
-    <small className={ styles.copyright }>&copy; 2004-{ new Date().getFullYear() } Woot, Inc.</small>
+    <small>&copy; 2004-{ new Date().getFullYear() } Woot, Inc.</small>
 </footer>;

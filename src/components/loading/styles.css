@@ -1,0 +1,86 @@
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+    }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.icon {
+    & svg {
+        animation: rotate 1.75s linear infinite;
+        height: 15vw;
+        width: 15vw;
+        transform-origin: center center;
+    }
+
+    & circle {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        animation: dash 1.25s ease-in-out infinite;
+        stroke-linecap: round;
+    }
+}
+
+.Woot svg {
+    stroke: #669510;
+}
+
+.Home svg {
+    stroke: #d35500;
+}
+
+.Electronics svg {
+    stroke: #108487;
+}
+
+.Computers svg {
+    stroke: #019eb2;
+}
+
+.Tools svg {
+    stroke: #ff8500;
+}
+
+.Sport svg {
+    stroke: #60aa00;
+}
+
+.Fashion svg {
+    stroke: #6230aa;
+}
+
+.Kids svg {
+    stroke: #efa602;
+}
+
+.Shirt svg {
+    stroke: #0071b0;
+}
+
+.Wine svg {
+    stroke: #891b28;
+}
+
+.Sellout svg {
+    stroke: #467c32;
+}

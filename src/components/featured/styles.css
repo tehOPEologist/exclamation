@@ -63,3 +63,8 @@
 .priceDash {
     margin: 0 5px;
 }
+
+.featuredWrapper {
+    display: flex;
+    flex-direction: column;
+}
