@@ -3,7 +3,7 @@ module.exports = {
         'postcss-cssnext': {
             browsers: [
                 'last 2 versions',
-                'ie > 8'
+                'ie > 10'
             ]
         }
     }

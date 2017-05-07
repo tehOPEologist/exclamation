@@ -2,6 +2,8 @@ const resolve = require('path').resolve;
 const webpack = require('webpack');
 const HtmlPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
+const PwaManifest = require('webpack-pwa-manifest');
 
 module.exports = {
     entry: [
@@ -70,6 +72,20 @@ module.exports = {
         new ExtractTextPlugin({
             allChunks: true,
             filename: 'styles.css'
-        })
+        }),
+        new PwaManifest({
+            name: 'Woot: Daily Deals for Electronics, Computers, Home, Tools, Garden, Sport, Accessories, Kids, Shirt, Wine, & more',
+            short_name: 'Woot!',
+            description: 'Find great deals on tablets, laptops, speakers, headphones, home theater equipment, and much more. Daily deals site featuring discounts for electronics, computers, home, tools, garden, sport, accessories, kids, shirts, and wine.',
+            background_color: '#669510',
+            theme_color: '#fff',
+            icons: [
+                {
+                    src: resolve(__dirname, 'src', 'images', 'favicon.png'),
+                    size: '200x200'
+                }
+            ]
+        }),
+        new OfflinePlugin()
     ]
 };

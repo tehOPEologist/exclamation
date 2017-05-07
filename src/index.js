@@ -6,6 +6,10 @@ import 'normalize.css';
 import './index.css';
 import App from './components/app';
 
+if (!module.hot) {
+    require('offline-plugin/runtime').install();
+}
+
 const render = Component => {
     ReactDOM.render(
         <AppContainer>
