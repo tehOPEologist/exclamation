@@ -74,11 +74,11 @@ module.exports = {
             filename: 'styles.css'
         }),
         new PwaManifest({
-            name: 'Woot: Daily Deals for Electronics, Computers, Home, Tools, Garden, Sport, Accessories, Kids, Shirt, Wine, & more',
+            name: 'Woot!',
             short_name: 'Woot!',
             description: 'Find great deals on tablets, laptops, speakers, headphones, home theater equipment, and much more. Daily deals site featuring discounts for electronics, computers, home, tools, garden, sport, accessories, kids, shirts, and wine.',
-            background_color: '#669510',
-            theme_color: '#fff',
+            background_color: '#fff',
+            theme_color: '#669510',
             icons: [
                 {
                     src: resolve(__dirname, 'src', 'images', 'favicon.png'),
